@@ -18,9 +18,7 @@ import static com.android.internal.telephony.PhoneConstants.LTE_ON_CDMA_UNKNOWN;
 
 import static com.google.android.setupcompat.util.ResultCodes.RESULT_SKIP;
 
-import static org.lineageos.setupwizard.SetupWizardApp.DISABLE_NAV_KEYS;
 import static org.lineageos.setupwizard.SetupWizardApp.ENABLE_RECOVERY_UPDATE;
-import static org.lineageos.setupwizard.SetupWizardApp.KEY_SEND_METRICS;
 import static org.lineageos.setupwizard.SetupWizardApp.LOGV;
 import static org.lineageos.setupwizard.SetupWizardApp.NAVIGATION_OPTION_KEY;
 import static org.lineageos.setupwizard.SetupWizardApp.UPDATE_RECOVERY_PROP;
@@ -176,8 +174,6 @@ public class SetupWizardUtils {
                     Settings.Secure.TV_USER_SETUP_COMPLETE, 1);
         }
 
-        handleEnableMetrics(context);
-        handleNavKeys(context);
         handleRecoveryUpdate();
         handleNavigationOption();
         WallpaperManager.getInstance(context).forgetLoadedWallpaper();
@@ -272,24 +268,6 @@ public class SetupWizardUtils {
             int enabledState) {
         context.getPackageManager().setComponentEnabledSetting(componentName,
                 enabledState, DONT_KILL_APP);
-    }
-
-    private static void handleEnableMetrics(Context context) {
-        Bundle privacyData = SetupWizardApp.getSettingsBundle();
-        if (privacyData != null
-                && privacyData.containsKey(KEY_SEND_METRICS)) {
-            LineageSettings.Secure.putInt(context.getContentResolver(),
-                    LineageSettings.Secure.STATS_COLLECTION,
-                    privacyData.getBoolean(KEY_SEND_METRICS)
-                            ? 1 : 0);
-        }
-    }
-
-    private static void handleNavKeys(Context context) {
-        if (SetupWizardApp.getSettingsBundle().containsKey(DISABLE_NAV_KEYS)) {
-            writeDisableNavkeysOption(context,
-                    SetupWizardApp.getSettingsBundle().getBoolean(DISABLE_NAV_KEYS));
-        }
     }
 
     private static void handleRecoveryUpdate() {
