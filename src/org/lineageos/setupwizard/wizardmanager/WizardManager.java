@@ -127,6 +127,7 @@ public class WizardManager extends Activity {
     }
 
     private void exit(String scriptUri) {
+        if (scriptUri == null) scriptUri = "";
         if (LOGV) {
             Log.v(TAG, "exit scriptUri=" + scriptUri);
         }
@@ -142,6 +143,7 @@ public class WizardManager extends Activity {
         }
 
         WizardScript wizardScript = getWizardScript(context, scriptUri);
+        if (wizardScript == null) return null;
         WizardAction wizardAction;
         for (wizardAction = wizardScript.getNextAction(actionId, resultCode);
                 wizardAction != null;
@@ -173,6 +175,7 @@ public class WizardManager extends Activity {
     }
 
     private static WizardScript getWizardScript(Context context, String scriptUri) {
+        if (scriptUri == null || scriptUri.isEmpty()) return null;
         WizardScript wizardScript = sWizardScripts.get(scriptUri);
         if (wizardScript == null) {
             wizardScript = WizardScript.loadFromUri(context, scriptUri);
