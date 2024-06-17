@@ -36,8 +36,6 @@ public class SetupWizardApp extends Application {
     public static final String EXTRA_PREFS_SET_BACK_TEXT = "extra_prefs_set_back_text";
     public static final String EXTRA_ENABLE_NEXT_ON_CONNECT = "wifi_enable_next_on_connect";
 
-    public static final String NAVIGATION_OPTION_KEY = "navigation_option";
-
     public static final int RADIO_READY_TIMEOUT = 10 * 1000;
 
     private static StatusBarManager sStatusBarManager;

@@ -106,9 +106,6 @@
         <result wizard:action="theme_settings" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.THEME_SETTINGS;end" id="theme_settings">
-        <result wizard:action="navigation_settings" />
-    </WizardAction>
-    <WizardAction wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.NAVIGATION_SETTINGS;end" id="navigation_settings">
         <result wizard:action="finish" />
     </WizardAction>
     <WizardAction wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE;end" id="finish">
