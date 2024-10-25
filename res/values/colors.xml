@@ -11,4 +11,12 @@
     <color name="button_bar_text_disabled">#321e1e1e</color>
 
     <color name="divider">#40000000</color>
+
+    <!-- Bootleg new logo color scheme -->
+    <!--    - Base Colors -->
+    <color name="bootleg_about_base_color">@*android:color/system_accent1_100</color>
+    <color name="bootleg_about_upper_color">@*android:color/system_accent1_200</color>
+    <!--    - Logo Colors -->
+    <color name="bootleg_about_text_color">@*android:color/system_accent3_600</color>
+    <color name="bootleg_about_logo_color">@*android:color/system_accent2_600</color>
 </resources>
