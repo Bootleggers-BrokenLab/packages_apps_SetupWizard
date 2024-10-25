@@ -27,6 +27,6 @@
     <string name="location_access_summary"><b>อนุญาตให้แอปที่ขออนุญาต</b> ใช้ข้อมูลตำแหน่งที่ตั้งของคุณ ซึ่งอาจรวมถึงตำแหน่งที่ตั้งปัจจุบันและที่ผ่านมา</string>
     <string name="update_recovery_title">อัปเดตรุ่น Lineage Recovery</string>
     <string name="setup_services">คุณสมบัติ LineageOS</string>
-    <string name="services_help_improve_cm">ช่วยปรับปรุง <xliff:g id="name" example="YAAP">%s</xliff:g></string>
+    <string name="services_help_improve_cm">ช่วยปรับปรุง <xliff:g id="name" example="BTLG">%s</xliff:g></string>
     <string name="services_os_nav_keys_label"><b>ใช้แถบนำทาง</b> แทนการใช้ปุ่มบนอุปกรณ์</string>
 </resources>
